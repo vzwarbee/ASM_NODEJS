@@ -1,0 +1,32 @@
+.contact-inner-wrapper {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+    gap: 15px;
+}
+.contact-inner-wrapper > div {
+    width: 48%;
+}
+
+.contact-inner-wrapper .contact-title {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 35px;
+    text-align: left;
+    margin-top: 0;
+}
+.contact-inner-wrapper form .form-group .form-control {
+    background-color: var(--color-f5f5f7);
+    padding: 10px;
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+.contact-inner-wrapper .contact-info > div li {
+    list-style: none;
+}
+.contact-inner-wrapper .contact-info > div li address,
+.contact-inner-wrapper .contact-info > div li a,
+.contact-inner-wrapper .contact-info > div li p {
+    color: var(--color-777);
+}

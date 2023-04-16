@@ -1,0 +1,48 @@
+.wishlist-card {
+    padding: 20px 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.wishlist-card .cross {
+    top: 15px;
+    right: 15px;
+    width: 20px;
+    padding: 3px;
+    cursor: pointer;
+}
+.wishlist-detail {
+    padding: 0 10px;
+}
+.wishlist-detail h5.title {
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    color: var(--color-1c1c1b);
+}
+.wishlist-detail h6.price {
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.wishlist-detail div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+.wishlist-detail div h5{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 0;
+    color: var(--color-1c1c1b);
+}
+.wishlist-detail div p{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 0;
+}

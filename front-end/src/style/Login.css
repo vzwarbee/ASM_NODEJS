@@ -1,0 +1,49 @@
+.login-card {
+    padding: 20px;
+    background-color: white;
+    width: 500px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+.login-card h3 {
+    color: var(--color-777);
+    font-size: 19px;
+    font-weight: 500;
+
+}
+.login-card .second-title {
+    color: var(--color-777);
+    font-size: 13px;
+    font-weight: 400;
+
+}
+.login-card .form-control {
+    height: 50px;
+    background-color: var(--color-f5f5f7);
+    color: var(--color-777);
+    font-size: 14px;
+    border-radius: 5px;
+    border-color: transparent;
+}
+.login-card a {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-1c1c1b);
+    transition: .25s;
+}
+.login-card a:hover {
+    color: var(--bs-danger);
+}
+.login-card button:hover {
+    border-color: transparent;
+}
+.login-card .signup {
+    border:1px solid var(--color-febd69) ;
+    background-color: transparent !important;
+    color:  var(--color-febd69);
+}
+.login-card .signup:hover {
+    background-color: var(--color-232f3e) !important;
+    color: white !important;
+    border-color: transparent;
+}
