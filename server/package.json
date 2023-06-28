@@ -80,7 +80,7 @@
     "minipass": "^4.2.4",
     "minizlib": "^2.1.2",
     "mkdirp": "^1.0.4",
-    "mongodb": "^5.1.0",
+    "mongodb": "4.0",
     "mongodb-connection-string-url": "^2.6.0",
     "mongoose": "^7.0.0",
     "morgan": "^1.10.0",

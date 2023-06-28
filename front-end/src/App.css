@@ -271,6 +271,6 @@ color: var(--color-777);
 }
 
 
-#update-comment {
+.update-comment {
 display: none;
 }

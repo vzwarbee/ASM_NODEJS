@@ -17,6 +17,13 @@ export const creProduct = createAsyncThunk('product/create-products', async (pro
         return thunkAPI.rejectWithValue(error)
     }
 });
+export const delProduct = createAsyncThunk('product/delete-products', async (id, thunkAPI) => {
+    try {
+        return await productService.deleteProduct(id);
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error)
+    }
+});
 
 
 
@@ -58,6 +65,25 @@ export const productSlice = createSlice({
                 toast.success("Thêm thành công")
             }
         }).addCase(creProduct.rejected, (state, action) => {
+            state.isLoading = false;
+            state.isSuccess = false;
+            state.isError = true;
+            state.message = action.error;
+            if (state.isError === true) {
+                toast.error(action.error)
+            }
+        }).addCase(delProduct.pending, (state) => {
+            state.isLoading = true
+        }).addCase(delProduct.fulfilled, (state, action) => {
+            state.isLoading = false;
+            state.isSuccess = true;
+            state.isError = false;
+            state.deleteProduct = action.payload;
+            state.message = "success"
+            if (state.isSuccess === true) {
+                toast.success("Xóa thành công")
+            }
+        }).addCase(delProduct.rejected, (state, action) => {
             state.isLoading = false;
             state.isSuccess = false;
             state.isError = true;
