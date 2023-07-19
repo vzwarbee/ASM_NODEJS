@@ -70,3 +70,15 @@ li {
     background-color: #f9f9f9;
   }
 }
+
+.font {
+  color: #fff;
+  font-size: 2rem;
+}
+.fs-1 {
+  color: yellow;
+  top: 5rem;
+  left: 20px;
+  position: absolute;
+  font-size: 5rem !important;
+}
