@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+      "name": "car",
+      "image": "https://mycarmakesnoise.com/wp-content/uploads/2023/01/Chevys-2024-Corvette-E-Ray-Reveal-Will-Hold-Few-Surprises2-480x360.jpg"
+    },
+    {
+        "id": 2,
+      "name": "car",
+      "image": "https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=1200"
+    },
+    {
+        "id": 3,
+      "name": "food",
+      "image": "https://media-cdn.tripadvisor.com/media/photo-s/0f/c7/48/de/foood.jpg"
+    },
+    {
+        "id": 4,
+      "name": "food",
+      "image": "https://img.freepik.com/premium-photo/top-view-delicious-mushroom-pizza-with-cheese-olives-dark-surface-meal-italian-foood_788160-759.jpg"
+    }
+  ]
