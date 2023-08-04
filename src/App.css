@@ -27,6 +27,23 @@
   }
 }
 
+.ui.divided.list .item {
+  padding: 10px;
+}
+
+
+.ui.button.primary:hover {
+  background-color: #2185d0;
+  color: #fff;
+}
+
+
+.ui.segment.song-detail {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
