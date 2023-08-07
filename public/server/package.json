@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "connect server fake api",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon main.js",
+    "start": "node main.js"
+  },
+  "author": "Taidev",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.3",
+    "nodemon": "^3.0.1"
+  }
+}
