@@ -36,24 +36,26 @@ const SingleProduct = () => {
     const location = useLocation()
     const getIdProduct = location.pathname.split('/')[2];
 
+    useEffect(() => {
+        dispatch(getOneProduct(getIdProduct))
+        dispatch(getAllProducts())
+    }, [dispatch])
+
     const productDetailState = useSelector((state) => state.product.productDetail)
     const popularState = useSelector((state) => state.product.products.slice(1, 5))
 
     const props = { width: 355, height: 450, zoomWidth: 450, img: productDetailState?.image[0]?.url ? productDetailState?.image[0]?.url : "https://www.parents.com/thmb/33GnBE0pqwhlEqxRWsrLiKT_28A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/iclever-transnova-kids-bluetooth-headphones-c34f2f5a5fbf40bd86a3fe957544fa50.png" };
 
 
-    useEffect(() => {
-        dispatch(getOneProduct(getIdProduct))
-        dispatch(getAllProducts())
-    }, [dispatch])
+
     let checkComment = []
     let customerID = ""
     if (getCustomerFromLocalStorage) {
-        customerID = getCustomerFromLocalStorage._id
+        customerID = getCustomerFromLocalStorage?._id
 
     }
-    if (productDetailState && productDetailState.ratings !== []) {
-        checkComment = productDetailState.ratings.map((rating) => rating.postedby._id);
+    if (productDetailState && productDetailState.ratings) {
+        checkComment = productDetailState.ratings.map((rating) => rating.postedby?._id);
     }
 
     const isCommentedByCustomer = checkComment.find((id) => id === customerID);
@@ -235,25 +237,24 @@ const SingleProduct = () => {
                                                 const buttonUpComment = item?.postedby?._id === customerID
 
                                                 const upComment = (e) => {
+                                                    console.log(e);
 
                                                     if (e) {
-                                                        document.getElementById(`update-comment-${e}`).style.display = "block"
+                                                        document.getElementById(`update-comment-${e}`).style.display = "block";
+
                                                         document.getElementById(`close-${e}`).style.display = "none"
                                                     }
                                                 }
                                                 const close = (e) => {
-
                                                     if (e) {
                                                         document.getElementById(`update-comment-${e}`).style.display = "none"
                                                         document.getElementById(`close-${e}`).style.display = "block"
                                                     }
 
-
-
-                                                }
+                                                };
                                                 return (
                                                     <div className='review mb-3' key={index}>
-                                                        <div id={`update-comment-${index}`} className='position-relative'>
+                                                        <div id={`update-comment-${index}`} className='position-relative' style={{ display: "none" }}>
                                                             <button className='position-absolute border-0 fs-4 bg-transparent text-danger' style={{ top: "10px", right: "20px" }} onClick={() => close(index)}><AiOutlineClose /></button>
                                                             <div className='d-flex gap-4 align-items-center'>
                                                                 <h5 className='fw-bold mb-0 error'>update comment</h5> |

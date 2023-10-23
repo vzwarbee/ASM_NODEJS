@@ -1,0 +1,9 @@
+@media (max-width: 380px) {
+    .humidity img, .windspeed img{
+        width: 40px;
+        height: 40px;
+    }
+    .humidity div h3, .windspeed div h3{
+        font-size: 1.3rem;
+    }
+}
